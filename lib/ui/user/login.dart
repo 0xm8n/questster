@@ -54,12 +54,21 @@ class _LoginPageState extends State<LoginPage> {
 
       appBar: AppBar(
         iconTheme: new IconThemeData(color: Colors.white),
-        title: Text(
-          'Questster',
-          style: TextStyle(
-            color: Colors.white,
-            fontFamily: "Kanit-Bold",
-          ),
+        title: Row(
+          children: <Widget>[
+            Image.asset(
+              "assets/logo_white.png",
+              width: ScreenUtil.getInstance().setWidth(110),
+              height: ScreenUtil.getInstance().setHeight(110),
+            ),
+            Text("Questster",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: "Kanit-Bold",
+                    fontSize: ScreenUtil.getInstance().setSp(46),
+                    letterSpacing: .6,
+                    fontWeight: FontWeight.bold))
+          ],
         ),
       ),
       drawer: MenuDrawer(),
@@ -71,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
             children: <Widget>[
               Padding(
                 padding: EdgeInsets.only(top: 0.0),
-                child: Image.asset("assets/image_01.png"),
+                child: Image.asset("assets/jobs_s.jpg"),
               ),
               Expanded(
                 child: Container(),
@@ -86,17 +95,14 @@ class _LoginPageState extends State<LoginPage> {
                 children: <Widget>[
                   Row(
                     children: <Widget>[
-                      Image.asset(
-                        "assets/logo.png",
-                        width: ScreenUtil.getInstance().setWidth(110),
-                        height: ScreenUtil.getInstance().setHeight(110),
+                      Text("Login before get or post a quest",
+                        style: TextStyle(
+                          fontFamily: "Kanit-Bold",
+                          fontSize: ScreenUtil.getInstance().setSp(36),
+                          letterSpacing: .6,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                      Text("LOGO",
-                          style: TextStyle(
-                              fontFamily: "Kanit-Bold",
-                              fontSize: ScreenUtil.getInstance().setSp(46),
-                              letterSpacing: .6,
-                              fontWeight: FontWeight.bold))
                     ],
                   ),
                   SizedBox(
