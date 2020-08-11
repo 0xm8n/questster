@@ -14,3 +14,12 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+# Preparation for dev
+
+Useful link for setup development environment
+
+- [Install Flutter](https://flutter.dev/docs/get-started/install/windows)
+- [Intellij or VSCode setup for Flutter](https://flutter.dev/docs/development/tools/android-studio)
+- [Widget library](https://api.flutter.dev/flutter/widgets/widgets-library.html)
+- [Flutter lib](https://pub.dev/)
