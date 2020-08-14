@@ -24,7 +24,6 @@ class _MyAppState extends State<MyApp> {
       ),
       home: HomePage(),
       routes: {
-        // When navigating to the "/second" route, build the SecondScreen widget.
         '/login': (context) => LoginPage(),
         '/questlist': (context) => QuestListPage(),
         '/questdetail': (context) => QuestDetailPage(),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class FormCard extends StatelessWidget {
+class LoginForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Container(
+    return Container(
       width: double.infinity,
 //      height: ScreenUtil.getInstance().setHeight(500),
       padding: EdgeInsets.only(bottom: 1),
@@ -28,33 +28,37 @@ class FormCard extends StatelessWidget {
           children: <Widget>[
             Text("Login",
                 style: TextStyle(
-                    fontSize: ScreenUtil.getInstance().setSp(45),
+                    fontSize: 24,
                     fontFamily: "Kanit-Bold",
                     letterSpacing: .6)),
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(30),
             ),
             Text("Username",
-                style: TextStyle(
-                    fontFamily: "Kanit-Medium",
-                    fontSize: ScreenUtil.getInstance().setSp(26))),
+              style: TextStyle(
+                fontFamily: "Kanit-Medium",
+                fontSize: 16,
+              ),
+            ),
             TextField(
               decoration: InputDecoration(
                   hintText: "username",
-                  hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
+                  hintStyle: TextStyle(color: Colors.grey)),
             ),
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(30),
             ),
-            Text("PassWord",
-                style: TextStyle(
-                    fontFamily: "Kanit-Medium",
-                    fontSize: ScreenUtil.getInstance().setSp(26))),
+            Text("Password",
+              style: TextStyle(
+                fontFamily: "Kanit-Medium",
+                fontSize: 16,
+              ),
+            ),
             TextField(
               obscureText: true,
               decoration: InputDecoration(
-                  hintText: "Password",
-                  hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0)),
+                  hintText: "password",
+                  hintStyle: TextStyle(color: Colors.grey)),
             ),
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(35),
