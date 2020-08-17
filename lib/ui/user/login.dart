@@ -13,12 +13,6 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   bool _isSelected = false;
 
-  void _radio() {
-    setState(() {
-      _isSelected = !_isSelected;
-    });
-  }
-
   Widget radioButton(bool isSelected) => Container(
         width: 16.0,
         height: 16.0,
@@ -35,15 +29,6 @@ class _LoginPageState extends State<LoginPage> {
               )
             : Container(),
       );
-
-//  Widget horizontalLine() => Padding(
-//        padding: EdgeInsets.symmetric(horizontal: 16.0),
-//        child: Container(
-//          width: ScreenUtil.getInstance().setWidth(120),
-//          height: 1.0,
-//          color: Colors.black26.withOpacity(.2),
-//        ),
-//      );
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                 children: <Widget>[
                   Container(
                     child: Text(
-                      "Want to Gives or Takes Quests? Come on.",
+                      "Want to Gives or Takes Quests?\nCome on.",
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                       style: TextStyle(
@@ -108,17 +93,20 @@ class _LoginPageState extends State<LoginPage> {
                           SizedBox(
                             width: ScreenUtil.getInstance().setWidth(12),
                           ),
-                          GestureDetector(
-                            onTap: _radio,
-                            child: radioButton(_isSelected),
+                          Checkbox(
+                            value: _isSelected,
+                            onChanged: (_isSelected) {
+                              setState(() {
+                                _isSelected = !_isSelected;
+                              });
+                            },
                           ),
-                          SizedBox(
-                            width: ScreenUtil.getInstance().setWidth(8),
+                          Text(
+                            "Remember me",
+                            style: TextStyle(
+                              fontFamily: "Kanit-Medium",
+                            ),
                           ),
-                          Text("Remember me",
-                              style: TextStyle(
-                                fontFamily: "Kanit-Medium",
-                              ))
                         ],
                       ),
                       Container(
@@ -148,7 +136,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () => Navigator.pushNamed(context, '/signup'),
                         child: Text(
                           "SignUp",
                           style: TextStyle(

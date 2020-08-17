@@ -26,11 +26,67 @@ class SignupForm extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text("Login",
+            Text("Sign Up to Questster",
                 style: TextStyle(
                     fontSize: 24,
                     fontFamily: "Kanit-Bold",
                     letterSpacing: .6)),
+            SizedBox(
+              height: ScreenUtil.getInstance().setHeight(30),
+            ),
+            Text("Name",
+              style: TextStyle(
+                fontFamily: "Kanit-Medium",
+                fontSize: 16,
+              ),
+            ),
+            TextField(
+              decoration: InputDecoration(
+                  hintText: "name",
+                  hintStyle: TextStyle(color: Colors.grey)),
+            ),
+            SizedBox(
+              height: ScreenUtil.getInstance().setHeight(30),
+            ),
+            Text("Surname",
+              style: TextStyle(
+                fontFamily: "Kanit-Medium",
+                fontSize: 16,
+              ),
+            ),
+            TextField(
+              decoration: InputDecoration(
+                  hintText: "surname",
+                  hintStyle: TextStyle(color: Colors.grey)),
+            ),
+            SizedBox(
+              height: ScreenUtil.getInstance().setHeight(30),
+            ),
+            Text("Email",
+              style: TextStyle(
+                fontFamily: "Kanit-Medium",
+                fontSize: 16,
+              ),
+            ),
+            TextField(
+              decoration: InputDecoration(
+                  hintText: "email",
+                  hintStyle: TextStyle(color: Colors.grey)),
+            ),
+            SizedBox(
+              height: ScreenUtil.getInstance().setHeight(30),
+            ),
+            Text("Phone Number",
+              style: TextStyle(
+                fontFamily: "Kanit-Medium",
+                fontSize: 16,
+              ),
+            ),
+            TextField(
+              decoration: InputDecoration(
+                  hintText: "phone number eg. 0987654321",
+                  hintStyle: TextStyle(color: Colors.grey)),
+            ),
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(30),
             ),
@@ -62,21 +118,20 @@ class SignupForm extends StatelessWidget {
             ),
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(35),
+            ),Text("Confirm Password",
+              style: TextStyle(
+                fontFamily: "Kanit-Medium",
+                fontSize: 16,
+              ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                Text(
-                  "Forgot Password?",
-                  style: TextStyle(
-                      color: Colors.blue,
-                      fontFamily: "Kanit-Medium",
-                      fontSize: ScreenUtil.getInstance().setSp(28)),
-                )
-              ],
+            TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                  hintText: "must be the same as password",
+                  hintStyle: TextStyle(color: Colors.grey)),
             ),
             SizedBox(
-              height: ScreenUtil.getInstance().setHeight(20),
+              height: ScreenUtil.getInstance().setHeight(35),
             ),
           ],
         ),

@@ -16,7 +16,7 @@ class MainAppBar extends StatelessWidget {
         ),
         Container(width: 10,),
         Text(
-          title,
+          title != null ? title:'Questster',
           style: TextStyle(
             color: Colors.white,
             fontFamily: "Kanit-Bold",

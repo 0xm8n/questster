@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'ui/user/login.dart';
+import 'ui/user/signup.dart';
 import 'ui/quest/quest_detail.dart';
 import 'ui/quest/quest_list.dart';
 import 'ui/home/home.dart';
@@ -25,6 +26,7 @@ class _MyAppState extends State<MyApp> {
       home: HomePage(),
       routes: {
         '/login': (context) => LoginPage(),
+        '/signup': (context) => SignupPage(),
         '/questlist': (context) => QuestListPage(),
         '/questdetail': (context) => QuestDetailPage(),
       },

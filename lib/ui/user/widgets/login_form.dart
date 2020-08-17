@@ -69,7 +69,7 @@ class LoginForm extends StatelessWidget {
                 Text(
                   "Forgot Password?",
                   style: TextStyle(
-                      color: Colors.blue,
+                      color: Color(0xFF5d74e3),
                       fontFamily: "Kanit-Medium",
                       fontSize: ScreenUtil.getInstance().setSp(28)),
                 )
