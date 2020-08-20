@@ -6,6 +6,7 @@ import 'ui/user/signup.dart';
 import 'ui/quest/quest_detail.dart';
 import 'ui/quest/quest_list.dart';
 import 'ui/home/home.dart';
+import 'ui/quest/create_quest.dart';
 
 void main() => runApp(MyApp());
 
@@ -29,6 +30,7 @@ class _MyAppState extends State<MyApp> {
         '/signup': (context) => SignupPage(),
         '/questlist': (context) => QuestListPage(),
         '/questdetail': (context) => QuestDetailPage(),
+        '/questcreate': (context) => CreateQuestPage(),
       },
     );
   }

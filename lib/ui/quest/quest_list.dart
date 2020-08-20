@@ -8,12 +8,21 @@ class QuestListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ScreenUtil.instance = ScreenUtil.getInstance()..init(context);
-    ScreenUtil.instance = ScreenUtil(width: 720, height: 1280, allowFontScaling: true);
+    ScreenUtil.instance =
+        ScreenUtil(width: 720, height: 1280, allowFontScaling: true);
 
     return Scaffold(
       appBar: AppBar(
         iconTheme: new IconThemeData(color: Colors.white),
         title: MainAppBar(title: "Quest List"),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.add_circle),
+            iconSize: 46,
+            onPressed: () {Navigator.pushNamed(context, '/questcreate');},
+            padding: EdgeInsets.only(right: 20),
+          ),
+        ],
       ),
       drawer: MenuDrawer(),
       body: QuestList(),
@@ -25,7 +34,7 @@ class QuestList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.only(top: 10, bottom: 20.0),
+      padding: EdgeInsets.only(top:5, bottom: 20.0),
       children: List.generate(
         20,
         (index) => new QuestListItemCard(
@@ -49,7 +58,7 @@ class QuestListItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 5.0, left: 10.0, right: 10.0),
+      padding: EdgeInsets.only(bottom: 5.0, left: 5.0, right: 5.0),
       child: Container(
         width: double.infinity,
         padding: EdgeInsets.only(bottom: 5),
@@ -112,12 +121,16 @@ class QuestListItemCard extends StatelessWidget {
                     alignment: Alignment.centerRight,
                     height: ScreenUtil.getInstance().setHeight(70),
                     child: RaisedButton(
-                        onPressed: () {Navigator.pushNamed(context, '/questdetail');},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/questdetail');
+                        },
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0)),
                         padding: EdgeInsets.all(0.0),
-                        child: PriButton(text: 'MORE', size: 100,)
-                    ),
+                        child: PriButton(
+                          text: 'MORE',
+                          size: 100,
+                        )),
                   ),
                 ],
               ),
