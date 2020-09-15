@@ -28,7 +28,11 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
+  google_fonts: ^1.1.0
+  firebase_core: "^0.5.0"
+  firebase_auth: "^0.18.0+1"
   flutter_screenutil: ^0.4.2
+  get: ^3.10.2
 
 dev_dependencies:
   flutter_test:
@@ -61,16 +65,16 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
-    - family: Kanit-Regular
-      fonts:
-        - asset: fonts/Kanit-Regular.ttf
-    - family: Kanit-Bold
-      fonts:
-        - asset: fonts/Kanit-Bold.ttf
-    - family: Kanit-Medium
-      fonts:
-        - asset: fonts/Kanit-Medium.ttf
+  # fonts:
+  #   - family: Kanit-Regular
+  #     fonts:
+  #       - asset: fonts/Kanit-Regular.ttf
+  #   - family: Kanit-Bold
+  #     fonts:
+  #       - asset: fonts/Kanit-Bold.ttf
+  #   - family: Kanit-Medium
+  #     fonts:
+  #       - asset: fonts/Kanit-Medium.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

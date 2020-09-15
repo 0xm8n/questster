@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../widgets/app_bar.dart';
-import '../widgets/pri_button.dart';
+import 'package:questster/ui/widgets/app_bar.dart';
+import 'package:questster/ui/widgets/pri_button.dart';
 
 class QuestDetailPage extends StatelessWidget {
   @override

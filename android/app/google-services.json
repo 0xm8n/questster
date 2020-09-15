@@ -8,17 +8,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:35591468864:android:230baf366e72786c6f6ca5",
+        "mobilesdk_app_id": "1:35591468864:android:4b5d1e50e6ee87516f6ca5",
         "android_client_info": {
-          "package_name": "io.quest"
+          "package_name": "io.questster.questster"
         }
       },
       "oauth_client": [
         {
-          "client_id": "35591468864-8gnju7sailfj5vh83bgeblgirr5jl3q7.apps.googleusercontent.com",
+          "client_id": "35591468864-i8qsm5jdufqg4f1vh73k44cq4lpbooqn.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "io.quest",
+            "package_name": "io.questster.questster",
             "certificate_hash": "131a78c1d3682fc9ae39fe42cd8b1448a85fa03c"
           }
         },
